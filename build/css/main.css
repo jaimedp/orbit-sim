@@ -1,0 +1,18 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Helvetica Neue", arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
+#myCanvas {
+  border: solid 1px #222;
+}
