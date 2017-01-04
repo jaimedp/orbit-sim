@@ -4,13 +4,16 @@ const defaultOptions = Object.freeze({
   color: '#f00'
 });
 
+const sizeScale = 1 / 12756 * 10;
+
 export default class Body {
   constructor(mass = 1, name = 'Body', options = {}) {
     this.name = name;
     this.mass = mass;
+    this.diameter = options.d || 10;
     this.options = Object.assign({}, defaultOptions, options);
 
-    this.rad = 5;
+    this.rad = this.diameter / 2 * sizeScale;
 
     this.x = this.options.x || 0;
     this.y = this.options.y || 0;
